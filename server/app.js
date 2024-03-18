@@ -1,13 +1,13 @@
-const express = require('express');
+import express from "express";
+import bodyParser from 'body-parser'
+import cors from "cors"
+import routes from "./routes/index.js"
 const app = express();
-
-const bodyParser = require('body-parser');
-const cors = require('cors');
 
 app.use(bodyParser.json())
 app.use(cors())
 
-app.use(require('./routes'))
+app.use(routes)
 
 app.use((err, req, res, next) => {
     const status = err.status || 500;
@@ -19,4 +19,4 @@ app.use((err, req, res, next) => {
     })
 })
 
-module.exports = app;
+export default app
