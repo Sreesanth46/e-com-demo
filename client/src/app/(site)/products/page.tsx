@@ -1,9 +1,10 @@
 import Card from '@/components/Card';
+import { BackendUrl } from '@/lib/utils';
 import Link from 'next/link';
 import React from 'react';
 
 const getProducts = async () => {
-  const response = await fetch(`${process.env.BACKEND_URL}/products`, {
+  const response = await fetch(`${BackendUrl}/products`, {
     method: 'GET'
   });
 
@@ -16,7 +17,7 @@ const ProductsPage = async () => {
   return (
     <div className="flex gap-4 flex-col md:flex-row md:flex-wrap p-10">
       {products.map(product => (
-        <Link key={product._id} href={`products/${product._id}`}>
+        <Link key={product._id} href={`/products/${product._id}`}>
           <Card
             id={product._id}
             title={product.title}

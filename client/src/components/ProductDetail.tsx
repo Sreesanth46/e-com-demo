@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import type React from 'react';
 import StarIcon from './StarIcon';
+import { BackendUrl } from '@/lib/utils';
 
 const getProduct = async (id: string) => {
-  const response = await fetch(`${process.env.BACKEND_URL}/products/${id}`, {
+  const response = await fetch(`${BackendUrl}/products/${id}`, {
     method: 'GET'
   });
 
