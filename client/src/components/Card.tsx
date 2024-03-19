@@ -4,18 +4,18 @@ import CartIcon from './CartIcon';
 import StarIcon from './StarIcon';
 
 interface AppCardProp {
-  id: number;
+  id: number | string;
   title: string;
   price: number;
   description: string;
-  category: string;
+  category?: string;
   image: string;
   rating: IRating;
 }
 
 interface IRating {
-  rate: number;
-  count: number;
+  rate?: number;
+  count?: number;
 }
 
 export default function Card(props: AppCardProp) {
@@ -25,7 +25,7 @@ export default function Card(props: AppCardProp) {
     category,
     description,
     price,
-    rating: { rate }
+    rating: { rate = 0 }
   } = props;
   const discount = Math.floor(Math.random() * 21) + 10;
   return (
