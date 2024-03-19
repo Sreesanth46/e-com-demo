@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  api:
+    build:
+      context: ./server/
+      dockerfile: Dockerfile
+    ports:
+      - ${API_PORT}:${API_PORT}
+    environment:
+      PORT: ${API_PORT}
+      DATABASE: ${MONGO_DB_URL}
+
+  client:
+    image: client_dev
+    build:
+      context: ./client/.
+      dockerfile: Dockerfile
+    ports:
+      - 3003:3000
