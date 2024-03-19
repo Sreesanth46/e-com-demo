@@ -6,7 +6,6 @@ dotenv.config()
 const port = process.env.PORT || 9080;
 const MONGO_DB_URL = process.env.MONGO_DB_URL || ""
 
-console.log("URL: ", MONGO_DB_URL)
 mongoose.connect(MONGO_DB_URL).then(() => {
   app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
