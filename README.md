@@ -1,4 +1,4 @@
-# Demo Ecommerce Application
+# Demo E-commerce Application
 
 ### To Run the application
 
