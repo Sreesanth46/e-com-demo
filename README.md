@@ -8,7 +8,7 @@ git clone https://github.com/Sreesanth46/e-com-demo.git
 cd e-com-demo
 ```
 
-Update the environment variables as in the .env.example file
+Update the environment variables according to the .env.example file
 
 #### With docker
 
