@@ -24,7 +24,7 @@ cd client && npm i && npm run dev
 cd server && npm i && npm run dev
 ```
 
-## Live Preview
+## [Live Preview](https://demo.sreesanth.tech)
 
 ```
 https://demo.sreesanth.tech
